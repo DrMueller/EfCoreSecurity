@@ -1,0 +1,28 @@
+﻿<h3>Meetings</h3>
+
+@if (OverviewEntries == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Meeting Name</th>
+            <th>Has Agenda</th>
+            <th>Amount Of Participants</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var meeting in OverviewEntries)
+        {
+            <tr>
+                <td>@meeting.MeetingName</td>
+                <td>@(meeting.HasAgenda ? "Yes" : "No")</td>
+                <td>@meeting.AmountOfParticipants</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}

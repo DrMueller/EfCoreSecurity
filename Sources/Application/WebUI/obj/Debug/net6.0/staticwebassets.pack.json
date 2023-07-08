@@ -1,0 +1,77 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\MyGit\\Personal\\EfCoreSecurity\\Sources\\Application\\WebUI\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Mmu.EfCoreSecurity.WebUI.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Mmu.EfCoreSecurity.WebUI.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\MyGit\\Personal\\EfCoreSecurity\\Sources\\Application\\WebUI\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\MyGit\\Personal\\EfCoreSecurity\\Sources\\Application\\WebUI\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\MyGit\\Personal\\EfCoreSecurity\\Sources\\Application\\WebUI\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\MyGit\\Personal\\EfCoreSecurity\\Sources\\Application\\WebUI\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\MyGit\\Personal\\EfCoreSecurity\\Sources\\Application\\WebUI\\wwwroot\\css\\open-iconic\\README.md",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
+    },
+    {
+      "Id": "C:\\MyGit\\Personal\\EfCoreSecurity\\Sources\\Application\\WebUI\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\MyGit\\Personal\\EfCoreSecurity\\Sources\\Application\\WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Id": "C:\\MyGit\\Personal\\EfCoreSecurity\\Sources\\Application\\WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Id": "C:\\MyGit\\Personal\\EfCoreSecurity\\Sources\\Application\\WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "C:\\MyGit\\Personal\\EfCoreSecurity\\Sources\\Application\\WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "C:\\MyGit\\Personal\\EfCoreSecurity\\Sources\\Application\\WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Id": "C:\\MyGit\\Personal\\EfCoreSecurity\\Sources\\Application\\WebUI\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\MyGit\\Personal\\EfCoreSecurity\\Sources\\Application\\WebUI\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Mmu.EfCoreSecurity.WebUI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Mmu.EfCoreSecurity.WebUI.props",
+      "PackagePath": "build\\Mmu.EfCoreSecurity.WebUI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Mmu.EfCoreSecurity.WebUI.props",
+      "PackagePath": "buildMultiTargeting\\Mmu.EfCoreSecurity.WebUI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Mmu.EfCoreSecurity.WebUI.props",
+      "PackagePath": "buildTransitive\\Mmu.EfCoreSecurity.WebUI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
