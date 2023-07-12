@@ -9,12 +9,10 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="7.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.8" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.8" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.8" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Common\Mmu.EfCoreSecurity.Common.csproj" />
+    <Folder Include="DataSecurity\NewFolder\" />
   </ItemGroup>
 
 </Project>

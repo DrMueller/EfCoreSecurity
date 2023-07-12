@@ -1,0 +1,19 @@
+﻿@page "/meetings/{id:int}"
+
+<h1>Edit Meeting</h1>
+
+<EditForm Model="@MeetingVm" OnValidSubmit="@HandleValidSubmitAsync">
+    <DataAnnotationsValidator />
+    <h1>Edit Meeting</h1>
+
+    <div class="form-group">
+        <label for="meetingName">Meeting Name:</label>
+        <InputText class="form-control" id="meetingName" @bind-Value="@MeetingVm.MeetingName" />
+    </div>
+    <div class="form-group">
+        <label for="agendaPoint">Agenda Point:</label>
+        <InputText class="form-control" id="agendaPoint" @bind-Value="@MeetingVm.AgendaPoint" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</EditForm>

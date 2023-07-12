@@ -1,4 +1,4 @@
-﻿namespace Mmu.EfCoreSecurity.WebUI.DataAccess.Models.Base
+﻿namespace Mmu.EfCoreSecurity.DataAccess.Models.Base
 {
     public abstract class EntityBase
     {

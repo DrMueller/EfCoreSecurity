@@ -1,4 +1,7 @@
-﻿<h3>Meetings</h3>
+﻿@page "/meetings"
+<h3>Meetings</h3>
+
+<button class="btn btn-primary" @onclick="NavigateToCreate">Create</button>
 
 @if (OverviewEntries == null)
 {
@@ -17,7 +20,7 @@ else
         <tbody>
         @foreach (var meeting in OverviewEntries)
         {
-            <tr>
+            <tr @ondblclick="e => OnDoubleClick(meeting.MeetingId)">
                 <td>@meeting.MeetingName</td>
                 <td>@(meeting.HasAgenda ? "Yes" : "No")</td>
                 <td>@meeting.AmountOfParticipants</td>

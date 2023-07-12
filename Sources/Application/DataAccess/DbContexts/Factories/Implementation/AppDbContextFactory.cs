@@ -1,26 +1,35 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Mmu.EfCoreSecurity.Common.Security.Services;
+using Mmu.EfCoreSecurity.DataAccess.DataSecurity.Services;
 using Mmu.EfCoreSecurity.DataAccess.DbContexts.Contexts;
 using Mmu.EfCoreSecurity.DataAccess.DbContexts.Contexts.Implementation;
-using Mmu.EfCoreSecurity.WebUI.DataAccess.Models;
+using Mmu.EfCoreSecurity.DataAccess.DbContexts.Interceptors;
+using Mmu.EfCoreSecurity.DataAccess.Models;
 
 namespace Mmu.EfCoreSecurity.DataAccess.DbContexts.Factories.Implementation;
 
 public class AppDbContextFactory : IAppDbContextFactory
 {
-    private readonly Lazy<DbContextOptions> _lazyOptions;
+    private readonly IServiceProvider _services;
 
-    public AppDbContextFactory()
+    public AppDbContextFactory(IServiceProvider services)
     {
-        _lazyOptions = new Lazy<DbContextOptions>(
-            () => new DbContextOptionsBuilder()
-                .UseInMemoryDatabase("tra123")
-                .EnableSensitiveDataLogging()
-                .Options);
+        _services = services;
     }
 
     public IAppDbContext Create()
     {
-        var context = new AppDbContext(_lazyOptions.Value);
+        var options = new DbContextOptionsBuilder()
+            .UseInMemoryDatabase("tra123")
+            .EnableSensitiveDataLogging()
+            .AddInterceptors(_services.GetRequiredService<ISecurityInterceptor>())
+            .Options;
+
+        var context = new AppDbContext(
+            options,
+            _services.GetRequiredService<IEntitySecurityDispatcher>());
+
         SeedData(context);
 
         return context;
@@ -30,19 +39,32 @@ public class AppDbContextFactory : IAppDbContextFactory
     {
         if (context.DbSet<Meeting>().AsNoTracking().Any()) return;
 
-        for (var i = 1; i <= 10; i++)
-            context.Add(new Meeting
+        context.Add(new Meeting
+        {
+            //Id = i,
+            Agenda = new Agenda
             {
-                //Id = i,
-                Agenda = new Agenda
-                {
-                    Id = 10 + i,
-                    AgendaPoint = "AgendaPoint " + 100 + i
-                },
-                MeetingType = MeetingType.Long,
-                Name = "Agenda Name " + i,
-                Participants = CreateParticipants(i)
-            });
+                AgendaPoint = "AgendaPoint admin",
+                CreatedUserId = "admin"
+            },
+            MeetingType = MeetingType.Long,
+            Name = "Agenda Name ",
+            Participants = CreateParticipants(1)
+        });
+
+        context.Add(new Meeting
+        {
+            //Id = i,
+            Agenda = new Agenda
+            {
+                AgendaPoint = "AgendaPoint admin",
+                CreatedUserId = "user1"
+            },
+            MeetingType = MeetingType.Long,
+            Name = "Agenda Name ",
+            Participants = CreateParticipants(1)
+        });
+
 
         context.SaveChanges();
     }

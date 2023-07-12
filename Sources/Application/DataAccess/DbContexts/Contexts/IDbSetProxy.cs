@@ -5,12 +5,10 @@ namespace Mmu.EfCoreSecurity.DataAccess.DbContexts.Contexts
     public interface IDbSetProxy<TEntity>
         where TEntity : class
     {
-        Task<EntityEntry<TEntity>> AddAsync(TEntity entity);
+        Task<EntityEntry<TEntity>> UpsertAsync(TEntity entity);
 
         IQueryable<TEntity> AsNoTracking();
 
-        IQueryable<TEntity> AsQueryable();
-
-        void Remove(TEntity entity);
+        Task RemoveAsync(TEntity entity);
     }
 }

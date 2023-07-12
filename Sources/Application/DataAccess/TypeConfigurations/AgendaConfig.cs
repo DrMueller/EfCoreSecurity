@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Mmu.EfCoreSecurity.DataAccess.Models;
 using Mmu.EfCoreSecurity.DataAccess.TypeConfigurations.Base;
-using Mmu.EfCoreSecurity.WebUI.DataAccess.Models;
 
 namespace Mmu.EfCoreSecurity.DataAccess.TypeConfigurations
 {
@@ -9,6 +9,7 @@ namespace Mmu.EfCoreSecurity.DataAccess.TypeConfigurations
         protected override void ConfigureEntity(EntityTypeBuilder<Agenda> builder)
         {
             builder.Property(f => f.AgendaPoint).IsRequired();
+            builder.Property(f => f.CreatedUserId).IsRequired();
         }
     }
 }

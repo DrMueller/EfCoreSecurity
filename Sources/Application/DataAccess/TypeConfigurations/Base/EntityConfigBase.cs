@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Mmu.EfCoreSecurity.WebUI.DataAccess.Models.Base;
+using Mmu.EfCoreSecurity.DataAccess.Models.Base;
 
 namespace Mmu.EfCoreSecurity.DataAccess.TypeConfigurations.Base
 {

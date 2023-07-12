@@ -2,8 +2,10 @@
 {
     public class MeetingViewModel
     {
-        public AgendaViewModel Agenda { get; init; }
+        public long MeetingId { get; set; }
 
-        public IReadOnlyCollection<ParticipantViewModel> Participants { get; init; }
+        public string MeetingName { get; set; }
+
+        public string AgendaPoint { get; set; }
     }
 }

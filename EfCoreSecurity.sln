@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mmu.EfCoreSecurity.DataAcce
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mmu.EfCoreSecurity.WebUI", "Sources\Application\WebUI\Mmu.EfCoreSecurity.WebUI.csproj", "{5865FB1C-FB25-4487-B6C8-587C511335EE}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mmu.EfCoreSecurity.Common", "Sources\Application\Common\Mmu.EfCoreSecurity.Common.csproj", "{BF2D1A60-373C-4AC6-AD0D-FC99DDFA43A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5865FB1C-FB25-4487-B6C8-587C511335EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5865FB1C-FB25-4487-B6C8-587C511335EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5865FB1C-FB25-4487-B6C8-587C511335EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF2D1A60-373C-4AC6-AD0D-FC99DDFA43A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF2D1A60-373C-4AC6-AD0D-FC99DDFA43A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF2D1A60-373C-4AC6-AD0D-FC99DDFA43A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF2D1A60-373C-4AC6-AD0D-FC99DDFA43A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,4 @@
-﻿using Mmu.EfCoreSecurity.WebUI.DataAccess.Models.Base;
+﻿using Mmu.EfCoreSecurity.DataAccess.Models.Base;
 
 namespace Mmu.EfCoreSecurity.DataAccess.Querying;
 
