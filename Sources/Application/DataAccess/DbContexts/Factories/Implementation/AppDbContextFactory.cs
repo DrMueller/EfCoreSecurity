@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.Data.Sqlite;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Mmu.EfCoreSecurity.Common.Security.Services;
 using Mmu.EfCoreSecurity.DataAccess.DataSecurity.Services;
@@ -20,16 +21,23 @@ public class AppDbContextFactory : IAppDbContextFactory
 
     public IAppDbContext Create()
     {
-        var options = new DbContextOptionsBuilder()
-            .UseInMemoryDatabase("tra123")
-            .EnableSensitiveDataLogging()
-            .AddInterceptors(_services.GetRequiredService<ISecurityInterceptor>())
-            .Options;
+        //var options = new DbContextOptionsBuilder()
+        //    .UseInMemoryDatabase("tra123")
+        //    .EnableSensitiveDataLogging()
+        //    .AddInterceptors(_services.GetRequiredService<ISecurityInterceptor>())
+        //    .Options;
 
-        var context = new AppDbContext(
+            var options = new DbContextOptionsBuilder()
+                .UseSqlServer("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=TestEfCore;Data Source=N297\\SQLEXPRESS;Trusted_Connection=True;TrustServerCertificate=True")
+                .EnableSensitiveDataLogging()
+                .AddInterceptors(_services.GetRequiredService<ISecurityInterceptor>())
+                .Options;
+            var context = new AppDbContext(
             options,
             _services.GetRequiredService<IEntitySecurityDispatcher>());
 
+        context.Database.EnsureDeleted();
+        context.Database.EnsureCreated();
         SeedData(context);
 
         return context;

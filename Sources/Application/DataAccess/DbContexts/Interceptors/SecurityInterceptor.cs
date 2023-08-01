@@ -12,6 +12,7 @@ namespace Mmu.EfCoreSecurity.DataAccess.DbContexts.Interceptors
     {
         public override DbDataReader ReaderExecuted(DbCommand command, CommandExecutedEventData eventData, DbDataReader result)
         {
+            var tr = result.GetType();
             return base.ReaderExecuted(command, eventData, result);
         }
     }

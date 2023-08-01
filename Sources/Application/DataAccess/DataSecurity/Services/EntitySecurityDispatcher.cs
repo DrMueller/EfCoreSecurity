@@ -13,8 +13,7 @@ public class EntitySecurityDispatcher : IEntitySecurityDispatcher
     {
         _serviceProvider = serviceProvider;
     }
-
-
+    
     public async Task<EntityOperationCheckResult> CheckAuthorizationAsync<T>(EntityOperation operation, T entity)
         where T : EntityBase
     {
